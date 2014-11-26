@@ -42,9 +42,9 @@ public void printNextMailItem()
 /**
  * Envia un correo a la direccion indicada con el contenido pasado por parámetro
  */
-public void sendMailItem(String address,String message)
+public void sendMailItem(String address, String subject, String message)
 {
-	MailItem emailToSend = new MailItem(user, address, message);
+	MailItem emailToSend = new MailItem(user, address, subject, message);
 	server.post(emailToSend);
 }
 }
